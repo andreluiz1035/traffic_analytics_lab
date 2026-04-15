@@ -1,0 +1,12 @@
+
+#Estrutura geral
+VM + NSG + Flow Logs + Traffic Analytics + gerar carga → analisar picos
+
+
+echo "# traffic_analytics_lab" >> README.md
+git init
+git add README.md
+git commit -m "1"
+git branch -M main
+git remote add origin https://github.com/andreluiz1035/traffic_analytics_lab.git
+git push -u origin main

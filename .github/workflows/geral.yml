@@ -1,0 +1,11 @@
+name: Pipeline
+
+on:
+  push:
+    paths:
+      - 'trigger.txt'
+
+jobs:
+  vm:
+    uses: ./.github/workflows/vm.yml
+    secrets: inherit
