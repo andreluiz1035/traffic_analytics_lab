@@ -9,7 +9,7 @@ jobs:
   vm:
     uses: ./.github/workflows/vm.yml
     secrets: inherit
-jobs:
+
   storage:
     uses: ./.github/workflows/storage.yml
     secrets: inherit
