@@ -11,5 +11,6 @@ jobs:
     secrets: inherit
 
   storage:
+    needs: vm
     uses: ./.github/workflows/storage.yml
     secrets: inherit
