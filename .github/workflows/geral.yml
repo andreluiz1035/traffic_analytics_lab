@@ -19,3 +19,8 @@ jobs:
     needs: storage
     uses: ./.github/workflows/networkwatcher.yml
     secrets: inherit
+
+  flowlogs:
+    needs: networkwatcher
+    uses: ./.github/workflows/flowlogs.yml
+    secrets: inherit
