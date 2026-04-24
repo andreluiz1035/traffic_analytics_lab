@@ -31,6 +31,4 @@ jobs:
       #  PASSO NOVO (ESSENCIAL)
       - name: Deallocate VM
         run: |
-          az vm deallocate \
-            --name vm-lab \
-            --resource-group rg-traffic-lab
+          az vm deallocate --name vm-traffic-lab --resource-group rg-traffic-lab
