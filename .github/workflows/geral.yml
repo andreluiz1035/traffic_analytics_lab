@@ -15,7 +15,7 @@ jobs:
     uses: ./.github/workflows/storage.yml
     secrets: inherit
   
-  storage:
+  networkwatcher:
     needs: storage
     uses: ./.github/workflows/networkwatcher.yml
     secrets: inherit
