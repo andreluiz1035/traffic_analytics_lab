@@ -1,11 +1,26 @@
 variable "location" {
-  default = "brazilsouth"
+  description = "Região do Azure"
+  type        = string
+  default     = "brazilsouth"
 }
 
-variable "network_watcher_name" {
-  default = "NetworkWatcher_brazilsouth"
+variable "resource_group_name" {
+  description = "Nome do Resource Group"
+  type        = string
 }
 
-variable "network_watcher_rg_name" {
-  default = "NetworkWatcherRG"
+variable "vm_name" {
+  description = "Nome da VM"
+  type        = string
+}
+
+variable "admin_username" {
+  description = "Usuário administrador"
+  type        = string
+}
+
+variable "admin_password" {
+  description = "Senha do administrador"
+  type        = string
+  sensitive   = true
 }
