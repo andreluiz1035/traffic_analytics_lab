@@ -1,4 +1,4 @@
 variable "storage_account_name" {
-  description = "Nome da Storage Account existente"
+  description = "stotrafficflow1035"
   type        = string
 }
