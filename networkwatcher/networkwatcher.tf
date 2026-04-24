@@ -3,17 +3,16 @@ provider "azurerm" {
 }
 
 ############################
-# RG já existente (NÃO criar)
+# RG existente
 ############################
 data "azurerm_resource_group" "nw_rg" {
   name = var.network_watcher_rg_name
 }
 
 ############################
-# Network Watcher
+# Network Watcher existente
 ############################
-resource "azurerm_network_watcher" "nw" {
+data "azurerm_network_watcher" "nw" {
   name                = var.network_watcher_name
-  location            = var.location
   resource_group_name = data.azurerm_resource_group.nw_rg.name
 }

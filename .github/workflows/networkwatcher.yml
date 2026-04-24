@@ -15,12 +15,20 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_MCSE_TALAB }}
 
-      # 🔥 PASSO CRÍTICO
+      # ✔ garante RG
       - name: Ensure NetworkWatcherRG exists
         run: |
           az group create \
             --name NetworkWatcherRG \
             --location brazilsouth
+
+      #  PASSO MAIS IMPORTANTE
+      - name: Ensure Network Watcher exists
+        run: |
+          az network watcher configure \
+            --locations brazilsouth \
+            --resource-group NetworkWatcherRG \
+            --enabled true
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
