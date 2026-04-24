@@ -22,7 +22,7 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: ./networkWatcher
+        working-directory: ./networkwatcher
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
