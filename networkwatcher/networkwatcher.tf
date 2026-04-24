@@ -2,14 +2,13 @@ provider "azurerm" {
   features {}
 }
 
-# Referência ao RG existente
-data "azurerm_resource_group" "rg" {
-  name = "rg-traffic-lab"
+resource "azurerm_resource_group" "nw_rg" {
+  name     = var.network_watcher_rg_name
+  location = var.location
 }
 
-# Network Watcher
 resource "azurerm_network_watcher" "nw" {
-  name                = "NetworkWatcher_${var.location}"
+  name                = var.network_watcher_name
   location            = var.location
-  resource_group_name = data.azurerm_resource_group.rg.name
+  resource_group_name = azurerm_resource_group.nw_rg.name
 }
