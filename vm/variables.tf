@@ -10,7 +10,7 @@ variable "resource_group_name" {
 }
 
 variable "vm_name" {
-  description = "Nome da VM"
+  description = "vm-traffic-lab"
   type        = string
 }
 
