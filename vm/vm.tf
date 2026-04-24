@@ -145,7 +145,7 @@ EOF
   tags = {
     environment = "lab"
   }
-  power_state = "deallocated"
+  
 }
 
 # 🔹 Output IP público

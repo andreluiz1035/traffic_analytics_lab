@@ -2,7 +2,7 @@ name: VM
 
 on:
   workflow_call:
-  
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
@@ -27,3 +27,10 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: ./vm
+
+      #  PASSO NOVO (ESSENCIAL)
+      - name: Deallocate VM
+        run: |
+          az vm deallocate \
+            --name vm-lab \
+            --resource-group rg-traffic-lab
