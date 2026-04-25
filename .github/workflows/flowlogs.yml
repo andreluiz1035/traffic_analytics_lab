@@ -25,6 +25,7 @@ jobs:
         working-directory: ./flowlogs
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve \
-          -var="storage_account_name=${{ secrets.STORAGE_ACCOUNT_NAME }}"
+        run: terraform apply -auto-approve
         working-directory: ./flowlogs
+      
+      
