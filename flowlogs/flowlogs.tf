@@ -10,7 +10,7 @@ data "azurerm_network_security_group" "nsg" {
 # Storage Account existente
 ############################
 data "azurerm_storage_account" "sa" {
-  name                = var.storage_account_name
+  name                = "stotrafficflow1035"
   resource_group_name = "rg-traffic-lab"
 }
 
