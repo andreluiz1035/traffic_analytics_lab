@@ -1,3 +1,6 @@
+
+#Descobri que o Azure nao usa mais nsg flow log agora é vnet flow log.
+
 ########################################
 # Provider
 ########################################
