@@ -1,4 +1,4 @@
-name: FlowLogs
+name: Log-analytics-w
 
 on:
   workflow_call:
@@ -22,10 +22,10 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: ./flowlogs
+        working-directory: ./log-analytics-w
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        working-directory: ./flowlogs
+        working-directory: ./log-analytics-w
       
       
